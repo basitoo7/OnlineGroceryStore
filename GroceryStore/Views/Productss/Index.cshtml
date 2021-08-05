@@ -1,0 +1,70 @@
+﻿@model IEnumerable<GroceryStore.Models.Product>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table"border="1" style="border-color: black">
+        <tr style="background-color: #FA1818">
+            <th >
+            
+                @Html.DisplayNameFor(model => model.image_path)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.product_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product_price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.product_details)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Catagory.name)
+            </th>
+            <th>Actions</th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr style="background-color: #84c639">
+            <td>
+                @Html.DisplayFor(modelItem => item.image_path)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.product_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product_price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.product_details)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Catagory.name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.product_id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.product_id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.product_id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+
+    
+
+
+</body>
+</html>

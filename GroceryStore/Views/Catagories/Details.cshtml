@@ -1,0 +1,66 @@
+﻿@model GroceryStore.Models.Catagory
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Catagory</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Is_deleted)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Is_deleted)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.is_created)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.is_created)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.description)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.description)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.is_active)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.is_active)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

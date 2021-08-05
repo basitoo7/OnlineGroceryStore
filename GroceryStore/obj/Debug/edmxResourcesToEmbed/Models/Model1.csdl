@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Catagory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Is_deleted" Type="Boolean" Nullable="false" />
+    <Property Name="is_created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Catagories" FromRole="Catagories" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="CatUserRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UserInfoes" Relationship="Self.FK_UserInfo_CatUserRole" FromRole="CatUserRole" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="CustomerInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="OrderMains" Relationship="Self.FK_OrderMain_CustomerInfo" FromRole="CustomerInfo" ToRole="OrderMain" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productId" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Double" Nullable="false" />
+    <Property Name="price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="orderMainId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="OrderMain" Relationship="Self.FK_OrderDetail_OrderMain1" FromRole="OrderDetail" ToRole="OrderMain" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_OrderDetail_Products" FromRole="OrderDetail" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="OrderMain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="totalAmount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="deliveryCharges" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="orderStatus" Type="Byte" Nullable="false" />
+    <Property Name="customerInfoId" Type="Int64" Nullable="false" />
+    <Property Name="trackingNumber" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="CustomerInfo" Relationship="Self.FK_OrderMain_CustomerInfo" FromRole="OrderMain" ToRole="CustomerInfo" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetail_OrderMain1" FromRole="OrderMain" ToRole="OrderDetail" />
+    <NavigationProperty Name="OrderMain1" Relationship="Self.FK_OrderMain_OrderMain" FromRole="OrderMain" ToRole="OrderMain1" />
+    <NavigationProperty Name="OrderMain2" Relationship="Self.FK_OrderMain_OrderMain" FromRole="OrderMain1" ToRole="OrderMain" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catagory_id" Type="Int64" Nullable="false" />
+    <Property Name="image_path" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="product_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Product_price" Type="Double" Nullable="false" />
+    <Property Name="product_details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Catagory" Relationship="Self.FK_Products_Catagories" FromRole="Products" ToRole="Catagories" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetail_Products" FromRole="Products" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CatUserRoleId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="CatUserRole" Relationship="Self.FK_UserInfo_CatUserRole" FromRole="UserInfo" ToRole="CatUserRole" />
+  </EntityType>
+  <Association Name="FK_Products_Catagories">
+    <End Role="Catagories" Type="Self.Catagory" Multiplicity="1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Catagories">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="catagory_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInfo_CatUserRole">
+    <End Role="CatUserRole" Type="Self.CatUserRole" Multiplicity="1" />
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatUserRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserInfo">
+        <PropertyRef Name="CatUserRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderMain_CustomerInfo">
+    <End Role="CustomerInfo" Type="Self.CustomerInfo" Multiplicity="1" />
+    <End Role="OrderMain" Type="Self.OrderMain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerInfo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderMain">
+        <PropertyRef Name="customerInfoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_OrderMain1">
+    <End Role="OrderMain" Type="Self.OrderMain" Multiplicity="1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderMain">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="orderMainId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="productId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderMain_OrderMain">
+    <End Role="OrderMain" Type="Self.OrderMain" Multiplicity="1" />
+    <End Role="OrderMain1" Type="Self.OrderMain" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="OrderMain">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderMain1">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Square_Grocery_StoreEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Catagories" EntityType="Self.Catagory" />
+    <EntitySet Name="CatUserRoles" EntityType="Self.CatUserRole" />
+    <EntitySet Name="CustomerInfoes" EntityType="Self.CustomerInfo" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+    <EntitySet Name="OrderMains" EntityType="Self.OrderMain" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="UserInfoes" EntityType="Self.UserInfo" />
+    <AssociationSet Name="FK_Products_Catagories" Association="Self.FK_Products_Catagories">
+      <End Role="Catagories" EntitySet="Catagories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInfo_CatUserRole" Association="Self.FK_UserInfo_CatUserRole">
+      <End Role="CatUserRole" EntitySet="CatUserRoles" />
+      <End Role="UserInfo" EntitySet="UserInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderMain_CustomerInfo" Association="Self.FK_OrderMain_CustomerInfo">
+      <End Role="CustomerInfo" EntitySet="CustomerInfoes" />
+      <End Role="OrderMain" EntitySet="OrderMains" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_OrderMain1" Association="Self.FK_OrderDetail_OrderMain1">
+      <End Role="OrderMain" EntitySet="OrderMains" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Products" Association="Self.FK_OrderDetail_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderMain_OrderMain" Association="Self.FK_OrderMain_OrderMain">
+      <End Role="OrderMain" EntitySet="OrderMains" />
+      <End Role="OrderMain1" EntitySet="OrderMains" />
+    </AssociationSet>
+    <FunctionImport Name="GetOrderDetailByCustomer" ReturnType="Collection(Model.GetOrderDetailByCustomer_Result)">
+      <Parameter Name="CustomerInfoId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="SaveCustomerOrder" ReturnType="Collection(Int64)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Phone" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="TotalAmount" Mode="In" Type="Decimal" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="OrderStatus" Mode="In" Type="Byte" />
+      <Parameter Name="TrackingNumber" Mode="In" Type="String" />
+      <Parameter Name="Products" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UM_AuthenticateUser" ReturnType="Collection(Model.UM_AuthenticateUser_Result)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllOrder" ReturnType="Collection(Model.GetAllOrder_Result)" />
+  </EntityContainer>
+  <ComplexType Name="GetOrderDetailByCustomer_Result">
+    <Property Type="String" Name="product_name" Nullable="false" MaxLength="50" />
+    <Property Type="Double" Name="Qty" Nullable="false" />
+    <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="OrderMainId" Nullable="false" />
+    <Property Type="Byte" Name="OrderStatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="UM_AuthenticateUser_Result">
+    <Property Type="Int64" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Designation" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Phone" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="CatUserRoleId" Nullable="false" />
+    <Property Type="String" Name="Role" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetAllOrder_Result">
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CustomerPhone" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="CustomerEmail" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="OrderTotal" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="TrackingNumber" Nullable="false" MaxLength="8" />
+    <Property Type="Byte" Name="OrderStatus" Nullable="false" />
+    <Property Type="Int64" Name="OrderMainId" Nullable="false" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Catagories">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Is_deleted" Type="bit" Nullable="false" />
+    <Property Name="is_created" Type="datetime" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="is_active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatUserRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="address" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="productId" Type="int" Nullable="false" />
+    <Property Name="Qty" Type="float" Nullable="false" />
+    <Property Name="price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="orderMainId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderMain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="totalAmount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="deliveryCharges" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="orderStatus" Type="tinyint" Nullable="false" />
+    <Property Name="customerInfoId" Type="bigint" Nullable="false" />
+    <Property Name="trackingNumber" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="comment" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="catagory_id" Type="bigint" Nullable="false" />
+    <Property Name="image_path" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="product_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_price" Type="float" Nullable="false" />
+    <Property Name="product_details" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CatUserRoleId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_OrderDetail_OrderMain1">
+    <End Role="OrderMain" Type="Self.OrderMain" Multiplicity="1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderMain">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="orderMainId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="productId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderMain_CustomerInfo">
+    <End Role="CustomerInfo" Type="Self.CustomerInfo" Multiplicity="1" />
+    <End Role="OrderMain" Type="Self.OrderMain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerInfo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderMain">
+        <PropertyRef Name="customerInfoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderMain_OrderMain">
+    <End Role="OrderMain" Type="Self.OrderMain" Multiplicity="1" />
+    <End Role="OrderMain1" Type="Self.OrderMain" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="OrderMain">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderMain1">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Catagories">
+    <End Role="Catagories" Type="Self.Catagories" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Catagories">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="catagory_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInfo_CatUserRole">
+    <End Role="CatUserRole" Type="Self.CatUserRole" Multiplicity="1" />
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatUserRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserInfo">
+        <PropertyRef Name="CatUserRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetAllOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetOrderDetailByCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CustomerInfoId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="SaveCustomerOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="TotalAmount" Type="decimal" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderStatus" Type="tinyint" Mode="In" />
+    <Parameter Name="TrackingNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="Products" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="UM_AuthenticateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Catagories" EntityType="Self.Catagories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatUserRole" EntityType="Self.CatUserRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerInfo" EntityType="Self.CustomerInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderMain" EntityType="Self.OrderMain" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_OrderDetail_OrderMain1" Association="Self.FK_OrderDetail_OrderMain1">
+      <End Role="OrderMain" EntitySet="OrderMain" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Products" Association="Self.FK_OrderDetail_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderMain_CustomerInfo" Association="Self.FK_OrderMain_CustomerInfo">
+      <End Role="CustomerInfo" EntitySet="CustomerInfo" />
+      <End Role="OrderMain" EntitySet="OrderMain" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderMain_OrderMain" Association="Self.FK_OrderMain_OrderMain">
+      <End Role="OrderMain" EntitySet="OrderMain" />
+      <End Role="OrderMain1" EntitySet="OrderMain" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Catagories" Association="Self.FK_Products_Catagories">
+      <End Role="Catagories" EntitySet="Catagories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInfo_CatUserRole" Association="Self.FK_UserInfo_CatUserRole">
+      <End Role="CatUserRole" EntitySet="CatUserRole" />
+      <End Role="UserInfo" EntitySet="UserInfo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

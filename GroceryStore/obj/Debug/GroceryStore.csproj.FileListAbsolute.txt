@@ -1,0 +1,222 @@
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\GroceryStore.dll.config
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\GroceryStore.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\GroceryStore.pdb
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Antlr3.Runtime.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\EntityFramework.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\EntityFramework.SqlServer.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Google.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Newtonsoft.Json.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Owin.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.Helpers.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.Mvc.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.Optimization.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.Razor.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.WebPages.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.WebPages.Razor.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\WebGrease.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.Helpers.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.Mvc.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.Optimization.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.Razor.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.WebPages.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\System.Web.WebPages.Razor.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Newtonsoft.Json.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Antlr3.Runtime.pdb
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\EntityFramework.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\EntityFramework.SqlServer.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Google.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\obj\Debug\GroceryStore.csprojResolveAssemblyReference.cache
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\obj\Debug\GroceryStore.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\obj\Debug\GroceryStore.pdb
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Projects\MVCMisc\GroceryStore\GroceryStore\bin\Microsoft.Practices.ObjectBuilder2.dll
+E:\final year project\GroceryStore\GroceryStore\bin\GroceryStore.dll.config
+E:\final year project\GroceryStore\GroceryStore\bin\GroceryStore.dll
+E:\final year project\GroceryStore\GroceryStore\bin\GroceryStore.pdb
+E:\final year project\GroceryStore\GroceryStore\bin\Antlr3.Runtime.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Core.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Cookies.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Facebook.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Google.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.OAuth.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Twitter.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Web.Infrastructure.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Newtonsoft.Json.dll
+E:\final year project\GroceryStore\GroceryStore\bin\Owin.dll
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.Helpers.dll
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.Mvc.dll
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.Optimization.dll
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.Razor.dll
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.WebPages.Deployment.dll
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.WebPages.dll
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.WebPages.Razor.dll
+E:\final year project\GroceryStore\GroceryStore\bin\WebGrease.dll
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.Helpers.xml
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.Mvc.xml
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.Optimization.xml
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.Razor.xml
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.WebPages.xml
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.WebPages.Deployment.xml
+E:\final year project\GroceryStore\GroceryStore\bin\System.Web.WebPages.Razor.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Newtonsoft.Json.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Antlr3.Runtime.pdb
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Core.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Facebook.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Cookies.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.OAuth.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Google.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Twitter.xml
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\final year project\GroceryStore\GroceryStore\obj\Debug\GroceryStore.dll
+E:\final year project\GroceryStore\GroceryStore\obj\Debug\GroceryStore.pdb
+E:\final year project\GroceryStore\GroceryStore\obj\Debug\GroceryStore.csprojResolveAssemblyReference.cache
+E:\final year project\GroceryStore\GroceryStore\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\GroceryStore.dll.config
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\GroceryStore.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\GroceryStore.pdb
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Antlr3.Runtime.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Core.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Cookies.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Facebook.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Google.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.OAuth.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Twitter.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Web.Infrastructure.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Newtonsoft.Json.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Owin.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.Helpers.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.Mvc.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.Optimization.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.Razor.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.WebPages.Deployment.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.WebPages.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.WebPages.Razor.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\WebGrease.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Practices.ObjectBuilder2.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.Helpers.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.Mvc.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.Optimization.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.Razor.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.WebPages.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.WebPages.Deployment.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\System.Web.WebPages.Razor.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Newtonsoft.Json.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Antlr3.Runtime.pdb
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Core.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Facebook.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Cookies.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.OAuth.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Google.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Twitter.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\FROM BASIT\GroceryStore\GroceryStore\obj\Debug\GroceryStore.csprojResolveAssemblyReference.cache
+E:\FROM BASIT\GroceryStore\GroceryStore\obj\Debug\GroceryStore.dll
+E:\FROM BASIT\GroceryStore\GroceryStore\obj\Debug\GroceryStore.pdb
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\GroceryStore.dll.config
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\GroceryStore.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\GroceryStore.pdb
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Antlr3.Runtime.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\EntityFramework.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\EntityFramework.SqlServer.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Google.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Web.Infrastructure.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Newtonsoft.Json.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Owin.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.Helpers.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.Mvc.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.Optimization.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.Razor.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.WebPages.Deployment.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.WebPages.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.WebPages.Razor.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\WebGrease.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\EntityFramework.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\EntityFramework.SqlServer.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.Helpers.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.Mvc.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.Optimization.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.Razor.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.WebPages.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.WebPages.Deployment.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\System.Web.WebPages.Razor.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Newtonsoft.Json.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Antlr3.Runtime.pdb
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Google.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Sir Tanveer\GroceryStore\GroceryStore\obj\Debug\GroceryStore.csprojResolveAssemblyReference.cache
+E:\Sir Tanveer\GroceryStore\GroceryStore\obj\Debug\GroceryStore.dll
+E:\Sir Tanveer\GroceryStore\GroceryStore\obj\Debug\GroceryStore.pdb

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<GroceryStore.Models.Product>
+
+@{
+    ViewBag.Title = "Category wise Products";
+    //Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetProductsByCategory</title>
+</head>
+<body>
+    <div> 
+        <table border="1">
+            <tr>
+                <th>@Html.DisplayName("Name")</th>
+                <th>@Html.DisplayName("Description")</th>
+                <th>@Html.DisplayName("Unit Price")</th>
+            </tr>
+            @foreach (GroceryStore.Models.Product product in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => product.name)</td>
+                    <td>@Html.DisplayFor(ModelItem => product.description)</td>
+                    <td>@Html.DisplayFor(modelItem => product.unit_price)</td>
+                </tr>
+            }
+        </table>
+        <br />
+        @Html.ActionLink("Back to Main Page", "Index", "Category")
+    </div>
+</body>
+</html>

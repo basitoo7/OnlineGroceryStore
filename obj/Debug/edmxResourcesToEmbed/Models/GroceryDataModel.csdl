@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Catagory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="is_deleted" Type="Boolean" Nullable="false" />
+    <Property Name="created_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="deccription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Catagories" FromRole="Catagories" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="CustomerInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OrderMains" Relationship="Self.FK_OrderMain_CustomerInfo" FromRole="CustomerInfo" ToRole="OrderMain" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductsId" Type="Int64" Nullable="false" />
+    <Property Name="Qty" Type="Double" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="OrderMainId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="OrderMain" Relationship="Self.FK_OrderDetail_OrderMain" FromRole="OrderDetail" ToRole="OrderMain" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_OrderDetail_Products" FromRole="OrderDetail" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="OrderMain">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DeliveryCharges" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="OrderStatus" Type="Byte" Nullable="false" />
+    <Property Name="CustomerInfoId" Type="Int64" Nullable="false" />
+    <Property Name="TrackingNumber" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="CustomerInfo" Relationship="Self.FK_OrderMain_CustomerInfo" FromRole="OrderMain" ToRole="CustomerInfo" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetail_OrderMain" FromRole="OrderMain" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catagory_id" Type="Int64" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="is_deleted" Type="Boolean" Nullable="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="unit_price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="image_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="unit_text" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="quantity" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="unit_id" Type="Int64" Nullable="false" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Catagory" Relationship="Self.FK_Products_Catagories" FromRole="Products" ToRole="Catagories" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetail_Products" FromRole="Products" ToRole="OrderDetail" />
+    <NavigationProperty Name="Unit" Relationship="Self.FK_Products_Units1" FromRole="Products" ToRole="Units" />
+  </EntityType>
+  <EntityType Name="Unit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Units1" FromRole="Units" ToRole="Products" />
+  </EntityType>
+  <Association Name="FK_Products_Catagories">
+    <End Role="Catagories" Type="Self.Catagory" Multiplicity="1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Catagories">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="catagory_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderMain_CustomerInfo">
+    <End Role="CustomerInfo" Type="Self.CustomerInfo" Multiplicity="1" />
+    <End Role="OrderMain" Type="Self.OrderMain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderMain">
+        <PropertyRef Name="CustomerInfoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_OrderMain">
+    <End Role="OrderMain" Type="Self.OrderMain" Multiplicity="1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderMain">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="OrderMainId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="ProductsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Units1">
+    <End Role="Units" Type="Self.Unit" Multiplicity="1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Units">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="unit_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_of_my_projectEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Catagories" EntityType="Self.Catagory" />
+    <EntitySet Name="CustomerInfoes" EntityType="Self.CustomerInfo" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+    <EntitySet Name="OrderMains" EntityType="Self.OrderMain" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="Units" EntityType="Self.Unit" />
+    <AssociationSet Name="FK_Products_Catagories" Association="Self.FK_Products_Catagories">
+      <End Role="Catagories" EntitySet="Catagories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderMain_CustomerInfo" Association="Self.FK_OrderMain_CustomerInfo">
+      <End Role="CustomerInfo" EntitySet="CustomerInfoes" />
+      <End Role="OrderMain" EntitySet="OrderMains" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_OrderMain" Association="Self.FK_OrderDetail_OrderMain">
+      <End Role="OrderMain" EntitySet="OrderMains" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Products" Association="Self.FK_OrderDetail_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Units1" Association="Self.FK_Products_Units1">
+      <End Role="Units" EntitySet="Units" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <FunctionImport Name="SaveCustomerOrder" ReturnType="Collection(Int64)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Phone" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="TotalAmount" Mode="In" Type="Decimal" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="OrderStatus" Mode="In" Type="Byte" />
+      <Parameter Name="TrackingNumber" Mode="In" Type="String" />
+      <Parameter Name="Products" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetOrderDetailByCustomer" ReturnType="Collection(Model.GetOrderDetailByCustomer_Result)">
+      <Parameter Name="CustomerInfoId" Mode="In" Type="Int64" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GetOrderDetailByCustomer_Result">
+    <Property Type="String" Name="name" Nullable="false" MaxLength="100" />
+    <Property Type="Double" Name="Qty" Nullable="false" />
+    <Property Type="String" Name="unit_text" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="OrderMainId" Nullable="false" />
+    <Property Type="Byte" Name="OrderStatus" Nullable="false" />
+  </ComplexType>
+</Schema>

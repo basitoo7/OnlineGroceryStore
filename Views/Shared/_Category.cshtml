@@ -1,0 +1,11 @@
+﻿@model IEnumerable<GroceryStore.Models.Catagory>
+
+@foreach (GroceryStore.Models.Catagory category in Model)
+{
+    <li>
+        @*@Ajax.ActionLink(category.name, "GetProductsByCategory", "Product", new { categoryId = category.id }, new AjaxOptions() { InsertionMode = InsertionMode.Replace, UpdateTargetId = "divProducts" })*@
+        @*<span id="@category.id">@category.name</span>*@
+        <a id="@category.id" href="#" class="categoryList">@category.name</a>
+    </li>
+}
+
